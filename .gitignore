@@ -1,5 +1,7 @@
 /.devcontainer
 /docker-compose.override.yml
+data/*
+output/*
 
 # VSCode specific
 *.code-workspace
