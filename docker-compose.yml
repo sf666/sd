@@ -34,6 +34,14 @@ services:
     environment:
       - CLI_ARGS=--allow-code --xformers --enable-insecure-extension-access --api --gradio-img2img-tool color-sketch
 
+  auto-full: &automatic
+    <<: *base_service
+    profiles: ["auto-full"]
+    build: ./services/AUTOMATIC1111
+    image: sd-auto:58
+    environment:
+      - CLI_ARGS=--allow-code --xformers --enable-insecure-extension-access --api --gradio-img2img-tool color-sketch --precision full --no-half
+
   auto-cpu:
     <<: *automatic
     profiles: ["auto-cpu"]
