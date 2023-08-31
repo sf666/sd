@@ -31,7 +31,7 @@ services:
     <<: *base_service
     profiles: ["auto"]
     build: ./services/AUTOMATIC1111
-    image: sd-auto:63
+    image: sd-auto:64
     environment:
       - CLI_ARGS=--allow-code --xformers --enable-insecure-extension-access --api --gradio-img2img-tool color-sketch
 
@@ -70,7 +70,7 @@ services:
     <<: *base_service
     profiles: ["comfy"]
     build: ./services/comfy/
-    image: sd-comfy:4
+    image: sd-comfy:5
     environment:
       - CLI_ARGS=
 
