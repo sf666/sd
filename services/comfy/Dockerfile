@@ -8,6 +8,8 @@ ENV DEBIAN_FRONTEND=noninteractive PIP_PREFER_BINARY=1
 
 RUN apt-get update && apt-get install -y git && apt-get clean
 
+RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
+
 ENV ROOT=/stable-diffusion
 RUN --mount=type=cache,target=/root/.cache/pip \
   git clone https://github.com/comfyanonymous/ComfyUI.git ${ROOT} && \
