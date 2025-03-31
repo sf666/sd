@@ -4,7 +4,7 @@ x-base_service: &base_service
     ports:
       - "37861:7860"
     volumes:
-      - &v1 /cargo/docker-storage/sd/data:/data
+      - &v1 /lake/docker_data/stable:/data
       - &v2 ./output:/output
     stop_signal: SIGKILL
     tty: true
